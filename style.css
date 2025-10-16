@@ -1,0 +1,147 @@
+/* ======= ESTILO GERAL ======= */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #121212;
+    color: #f8f8f8;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 650px;
+    margin: 40px auto;
+    padding: 25px;
+    background-color: #1e1e1e;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(255, 182, 193, 0.2);
+}
+
+h1 {
+    text-align: center;
+    color: #ffb6c1;
+    font-size: 1.8em;
+    margin-bottom: 25px;
+}
+
+/* ======= PROGRESSO ======= */
+#progresso-container {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+#progresso-texto {
+    color: #fff;
+    font-weight: 500;
+}
+
+#barra-progresso {
+    width: 100%;
+    height: 12px;
+    background-color: #2b2b2b;
+    border-radius: 6px;
+    overflow: hidden;
+    margin-top: 8px;
+}
+
+#barra-preenchida {
+    height: 100%;
+    background: linear-gradient(90deg, #ff69b4, #ff1493);
+    width: 0%;
+    transition: width 0.4s ease-in-out;
+    border-radius: 6px;
+}
+
+/* ======= LISTA ======= */
+.categoria-header {
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: #ffb6c1;
+    border-bottom: 1px solid #ff69b4;
+    padding-bottom: 5px;
+}
+
+.item-lista {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2a2a2a;
+    margin: 8px 0;
+    padding: 10px 15px;
+    border-radius: 12px;
+    transition: background 0.3s;
+}
+
+.item-lista.parcial {
+    background-color: #353535;
+}
+
+.item-lista.concluido {
+    background-color: #1b3d1b;
+}
+
+.item-info {
+    flex-grow: 1;
+}
+
+.item-name {
+    font-size: 1em;
+    color: #fff;
+}
+
+.botoes-compra {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.quantidade-display {
+    font-size: 0.95em;
+    margin-right: 8px;
+    color: #ddd;
+}
+
+/* ======= ÍCONE CHECK ======= */
+.check-icon-concluido {
+    color: #4CAF50 !important;
+    font-size: 1.2em;
+    margin-left: 6px;
+    vertical-align: middle;
+    transition: transform 0.3s ease;
+}
+
+.item-lista.concluido .check-icon-concluido {
+    transform: scale(1.3);
+}
+
+/* ======= BOTÕES ======= */
+button {
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1em;
+    cursor: pointer;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+}
+
+.btn-add {
+    background-color: #ff69b4;
+    color: white;
+}
+
+.btn-remove {
+    background-color: #444;
+    color: white;
+}
+
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+button:hover:not(:disabled) {
+    transform: scale(1.1);
+}
